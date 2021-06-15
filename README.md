@@ -1,2 +1,2 @@
 "# kamil-ikert-kodilla-java" 
-"# calculator-kodilla" 
+"# kodilla-testing" 
