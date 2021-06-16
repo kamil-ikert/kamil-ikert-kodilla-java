@@ -4,17 +4,12 @@ public class Calculator {
     private int a;
     private int b;
 
-    public int addAtoB() {
+    public int addAtoB(int a, int b) {
         return a + b;
     }
 
-    public int subtractAFromB() {
+    public int subtractAFromB(int a, int b) {
         return b - a;
-    }
-
-    public Calculator(int a, int b) {
-        this.a = a;
-        this.b = b;
     }
 
     public int getA() {
