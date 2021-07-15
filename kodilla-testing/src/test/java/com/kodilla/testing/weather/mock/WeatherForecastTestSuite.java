@@ -73,36 +73,36 @@ public class WeatherForecastTestSuite {
     void testAverage() {
         //Given
         Map<String,Double> temperaturesMap = new HashMap<>();
-        temperaturesMap.put("Lodz", 25.5);
-        temperaturesMap.put("Krakow", 26.2);
-        temperaturesMap.put("Wroclaw", 24.8);
-        temperaturesMap.put("Warsaw", 25.2);
-        temperaturesMap.put("Gdansk", 26.1);
+        temperaturesMap.put("Lodz", 25.0);
+        temperaturesMap.put("Krakow", 30.0);
+        temperaturesMap.put("Wroclaw", 25.0);
+        temperaturesMap.put("Warsaw", 15.0);
+        temperaturesMap.put("Gdansk", 30.0);
         when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
         //When
         double result = weatherForecast.checkAverage();
         //Then
-        Assertions.assertEquals(25.5, result);
+        Assertions.assertEquals(25.0, result);
     }
 
     @Test
     void testMedian() {
         //Given
         Map<String, Double> temperaturesMap = new HashMap<>();
-        temperaturesMap.put("Lodz", 25.5);
-        temperaturesMap.put("Krakow", 26.2);
-        temperaturesMap.put("Wroclaw", 24.8);
-        temperaturesMap.put("Warsaw", 25.2);
-        temperaturesMap.put("Gdansk", 26.1);
+        temperaturesMap.put("Lodz", 5.0);
+        temperaturesMap.put("Krakow", 2.0);
+        temperaturesMap.put("Wroclaw", 3.0);
+        temperaturesMap.put("Warsaw", 4.0);
+        temperaturesMap.put("Gdansk", 1.0);
         when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
         //When
         double result = weatherForecast.checkMedian();
         //Then
-        Assertions.assertEquals(25.5, result);
+        Assertions.assertEquals(3.0, result);
     }
     }
 }
