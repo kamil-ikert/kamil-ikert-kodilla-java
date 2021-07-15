@@ -1,7 +1,8 @@
 package com.kodilla.testing.shape;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ShapeCollectorTestSuite {
 
@@ -37,45 +38,46 @@ public class ShapeCollectorTestSuite {
         void testAddFigure() {
             //Given
             ShapeCollector obj = new ShapeCollector();
-            Shape circle = new Circle();
+            Shape circle = new Circle(4.0);
             //When
             boolean result = obj.addFigure(circle);
             //Then
-            Assert.assertTrue(result);
+            assertTrue(result);
         }
 
         @org.junit.jupiter.api.Test
         void testRemoveFigure() {
             //Given
             ShapeCollector obj = new ShapeCollector();
-            Shape circle = new Circle();
+            Shape circle = new Circle(4.0);
             obj.addFigure(circle);
             //When
             boolean result = obj.removeFigure(circle);
             //Then
-            Assert.assertTrue(result);
+            assertTrue(result);
         }
 
         @org.junit.jupiter.api.Test
         void testGetFigure() {
             //Given
             ShapeCollector obj = new ShapeCollector();
-            Shape circle = new Circle();
+            Shape circle = new Circle(4.0);
             obj.addFigure(circle);
             //When
-            boolean result = obj.getFigure(0);
+            Shape result = obj.getFigure(0);
             //Then
-            Assert.assertTrue(result);
+            assertEquals(result, circle);
         }
 
         @org.junit.jupiter.api.Test
         void testShowFigures() {
             //
             ShapeCollector obj = new ShapeCollector();
-            Shape circle = new Circle();
+            Shape circle = new Circle(4.0);
             obj.addFigure(circle);
+            String result = "Circle";
             //
-            Assert.assertEquals(1, obj.showFigures(););
+            assertEquals(result, obj.showFigures());
         }
     }
 }
