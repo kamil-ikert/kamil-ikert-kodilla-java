@@ -25,7 +25,7 @@ public class WeatherForecast {
              exampleList.add(numbers.getValue());
              result =+ numbers.getValue();
         }
-        return result/exampleList.size();
+        return result;
     }
 
     public double checkMedian() {
@@ -35,12 +35,13 @@ public class WeatherForecast {
             exampleList.add(median.getValue());
         }
             Collections.sort(exampleList);
-            int n = exampleList.size();
+
+            int n = exampleList.size() - 1;
             if (n % 2 == 0) {
-                result = (exampleList.get(n/2) + exampleList.get(n/2 + 1)) / 2;
+                result = exampleList.get((n+1)/2);
             }
             else {
-                result = exampleList.get((n+1)/2);
+                result = (exampleList.get(n/2) + exampleList.get(n/2 + 1)) / 2;
             }
         return result;
     }
