@@ -23,9 +23,9 @@ public class WeatherForecast {
         double result = 0;
         for (Map.Entry<String, Double> numbers: temperatures.getTemperatures().entrySet()){
              exampleList.add(numbers.getValue());
-             result =+ numbers.getValue();
+             result += numbers.getValue();
         }
-        return result;
+        return result/ exampleList.size();
     }
 
     public double checkMedian() {
