@@ -8,13 +8,8 @@ public class MainFlight {
         FlightSearch flightSearch = new FlightSearch();
 
         try{
-            flightSearch.findFlight(flight);
-        } catch(RouteNotFoundException e) {
-            System.out.println(e);
-        }
-
-        try{
             flightSearch.findFlight(flight1);
+            flightSearch.findFlight(flight);
         } catch(RouteNotFoundException e) {
             System.out.println(e);
         }
