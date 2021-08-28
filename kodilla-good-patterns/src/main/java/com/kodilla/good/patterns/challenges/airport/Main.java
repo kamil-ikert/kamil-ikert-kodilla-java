@@ -11,5 +11,6 @@ public class Main {
         flightSearcher.searchByDeparture("Kiev");
         flightSearcher.searchByArrival("London");
         flightSearcher.searchByDeparture("Madrid");
+        flightSearcher.searchWithInterchange("Kiev", "Madrid", "London");
     }
 }
