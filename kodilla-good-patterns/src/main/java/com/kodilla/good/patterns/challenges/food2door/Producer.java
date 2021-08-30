@@ -21,15 +21,12 @@ public class Producer implements ProducerService {
 
     @Override
     public void process(Product product, int quantity) {
-        System.out.println("Message form producer:");
+        System.out.println("Message form the company:");
     }
 
     @Override
     public String toString() {
-        return "Producer{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+        return "Producer: "+ name + '(' + address + ')';
     }
 
     @Override

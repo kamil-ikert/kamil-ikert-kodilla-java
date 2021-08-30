@@ -6,9 +6,9 @@ public class Order {
     private Client client;
     private Product product;
     private LocalDate date;
-    private double amountTaken;
+    private int amountTaken;
 
-    public Order(Client client, Product product, LocalDate date, double amountTaken) {
+    public Order(Client client, Product product, LocalDate date, int amountTaken) {
         this.client = client;
         this.product = product;
         this.date = date;
@@ -27,7 +27,7 @@ public class Order {
         return date;
     }
 
-    public double getAmountTaken() {
+    public int getAmountTaken() {
         return amountTaken;
     }
 }

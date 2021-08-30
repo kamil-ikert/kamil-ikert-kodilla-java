@@ -22,4 +22,13 @@ public class Product {
     public int getQuantity() {
         return quantity;
     }
+
+    public void setQuantityAfterSale(int volumeOfPurchase) {
+        this.quantity = quantity-volumeOfPurchase;
+    }
+
+    @Override
+    public String toString() {
+        return "Product: " + name + " Quantity: " + quantity + " Price: " + price;
+    }
 }

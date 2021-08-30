@@ -42,6 +42,9 @@ public class DataReceiver {
 
         Order order = new Order(client1,product4, LocalDate.of(2021,12,21), 6);
 
+        Processor processor = new Processor(new EmailInformation(),registeredProducers);
+        processor.process(order);
+
 
 
 
