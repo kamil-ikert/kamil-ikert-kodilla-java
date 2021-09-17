@@ -1,0 +1,44 @@
+CREATE TABLE ISSUESLIST (
+                       ID SERIAL PRIMARY KEY,
+                       NAME VARCHAR(100)
+);
+
+CREATE TABLE ISSUES
+(
+    ID  SERIAL PRIMARY KEY,
+    ISSUESLIST_ID  BIGINT UNSIGNED NOT NULL,
+    SUMMARY   VARCHAR(1024),
+    DESCRIPTION VARCHAR(1024),
+    USER_ID_ASSIGNEDTO BIGINT UNSIGNED NOT NULL,
+    FOREIGN KEY (ISSUESLIST_ID) REFERENCES ISSUESLIST(ID),
+    FOREIGN KEY (USER_ID_ASSIGNEDTO) REFERENCES USERS(ID)
+);
+
+INSERT INTO ISSUESLIST (ID, NAME)
+VALUES (1, 'ToDo');
+
+INSERT INTO ISSUESLIST (ID, NAME)
+VALUES (2, 'In Progress');
+
+INSERT INTO ISSUESLIST (ID, NAME)
+VALUES (3, 'Done');
+
+INSERT INTO ISSUES (ID, ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES (1, 1,'Finish project for Paul', 'Paul has asked us for finishing his project because deadline is soon',
+        1);
+
+INSERT INTO ISSUES (ID, ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES (2, 2,'Java Course', 'Currently working on Java course to become a programmer',
+        4);
+
+INSERT INTO ISSUES (ID, ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES (3, 3,'Prepare dinner', 'Prepared dinner for the whole staff',
+        2);
+
+INSERT INTO ISSUES (ID, ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES (4, 3,'Cleaning workplace', 'Clean environment is a key to efficient work',
+        3);
+
+INSERT INTO ISSUES (ID, ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+VALUES (5, 1,'Fix the code', 'The program do not work, we have to fix it asap',
+        5);
