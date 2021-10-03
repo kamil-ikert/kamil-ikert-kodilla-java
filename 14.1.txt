@@ -2,22 +2,22 @@
   "carName": "Mercedes Benz",
   "carModel": "GLA",
   "seatsInfo": [
-	"seat1": {
+	  {
 		"fabric": "leather"
 		"colour": "Black and red"
 		},
 
-	"seat2": {
+	  {
 		"fabric": "leather"
 		"colour": "Black and red"
 		},
 
-	"seat3": {
+	  {
 		"fabric": "leather"
 		"colour": "Black and red"
 		},
 
-	"seat4": {
+	  {
 		"fabric": "leather"
 		"colour": "Black and red"
 		} ],
