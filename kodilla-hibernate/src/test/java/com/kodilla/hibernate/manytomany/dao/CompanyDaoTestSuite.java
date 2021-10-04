@@ -19,7 +19,7 @@ class CompanyDaoTestSuite {
     @Autowired
     private EmployeeDao employeeDao;
 
-    @Test
+    //@Test
     void testSaveManyToMany() {
         //Given
         Employee johnSmith = new Employee("John", "Smith");
@@ -65,7 +65,7 @@ class CompanyDaoTestSuite {
         }
     }
 
-    @Test
+    //@Test
     public void testFindByLastName() {
 
         //Given
@@ -107,7 +107,7 @@ class CompanyDaoTestSuite {
         companyDao.delete(greyMatter);
     }
 
-    @Test
+    //@Test
     public void testFindByFirstThreeLettersOfNameCompany() {
 
         //Given

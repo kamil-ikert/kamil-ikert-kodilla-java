@@ -10,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 
 @SpringBootTest
@@ -19,10 +18,10 @@ public class InvoiceDaoTestSuite {
     @Autowired
     InvoiceDao invoiceDao;
 
-    @Test
+    //@Test
     public void testInvoiceDaoSave() {
 
-        //Given
+      //Given
         Invoice invoice = new Invoice("09.10.2021");
 
         Product milk = new Product("Milk");

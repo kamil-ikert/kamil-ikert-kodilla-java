@@ -23,7 +23,7 @@ class TaskDaoTestSuite {
     @Autowired
     private TaskListDao taskListDao;
 
-    @Test
+    //@Test
     void testTaskDaoSave() {
         //Given
         Task task = new Task(DESCRIPTION, 7);
@@ -41,7 +41,7 @@ class TaskDaoTestSuite {
         taskDao.deleteById(id);
     }
 
-    @Test
+   // @Test
     void testTaskDaoFindByDuration() {
         //Given
         Task task = new Task(DESCRIPTION, 7);
@@ -59,7 +59,7 @@ class TaskDaoTestSuite {
         taskDao.deleteById(id);
     }
 
-    @Test
+   // @Test
     void testTaskDaoSaveWithFinancialDetails() {
         //Given
         Task task = new Task(DESCRIPTION, 30);
@@ -76,7 +76,7 @@ class TaskDaoTestSuite {
         taskDao.deleteById(id);
     }
 
-    @Test
+    //@Test
     void testNamedQueries() {
 
         //Given
